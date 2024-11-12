@@ -1,0 +1,159 @@
+html {
+    scroll-behavior: smooth;
+}
+/* General Background */
+body {
+    background: linear-gradient(to bottom, #f0f4f8, #0a53be); /* Light blue gradient */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Banner Image Styling */
+#banner {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Keeps image proportional */
+}
+/* Banner Styling */
+.custom-banner {
+    background: linear-gradient(to right, #2a6eb4, #2a6eb4 calc(100% - 750px), white 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    height: 30px;
+}
+
+.banner-logo {
+    font-style: italic;
+}
+
+/* Styling for the Nordakademie Logo */
+.banner-nak-logo {
+    height: 55px; /* Adjusts the logo height to match the banner */
+    width: auto; /* Maintains aspect ratio */
+    object-fit: cover;
+}
+
+/* Navigation Bar Styling */
+.section-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f4f8;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #d1d1d1;
+    gap: 20px;
+}
+
+.section-nav .nav-link {
+    color: #2a6eb4;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.section-nav .nav-link.active {
+    color: white;
+}
+
+.section-nav .nav-link.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #2a6eb4;
+    border-radius: 4px;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+
+/* Content Container Styling */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Headings */
+h1, h2 {
+    color: #00356b; /* UCLA blue tone */
+}
+
+/* Link Styling */
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.course-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-list li {
+    display: flex;
+    align-items: baseline;
+}
+
+.course-name {
+    min-width: 250px; /* Adjust width as needed for longest name */
+    padding-right: 10px; /* Adds a bit of space between name and price */
+    text-align: left;
+}
+
+.course-price {
+    text-align: left;
+}
+
+.vertical-video-container {
+    position: relative;
+    width: 100%;
+    max-width: 480px; /* Desired width of the cropped video */
+    height: 640px; /* Desired height to match vertical ratio */
+    overflow: hidden; /* Hide excess content */
+}
+
+.vertical-video-container iframe {
+    position: absolute;
+    top: -20%; /* Adjust as needed to center the cropped portion */
+    left: 50%;
+    transform: translateX(-50%) scale(1.5); /* Zoom in to crop sides */
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    min-height: 100%;
+    object-fit: cover; /* Ensures the content fills the container */
+}
