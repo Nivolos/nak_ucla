@@ -1,2 +1,2 @@
 # nak_ucla
-my study abroad at the UCLA in Los Angeles
+my study abroad at the UCLA
