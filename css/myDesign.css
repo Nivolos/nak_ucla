@@ -147,42 +147,59 @@ a:hover {
 }
 
 .tiles-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 20px;
     position: relative;
+    width: 100%;
     height: 330px;
     overflow: hidden;
 }
 
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00356b;
+    z-index: 1; /* Below tiles */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Ensure content inside is visible */
+    font-size: 24px;
+    text-align: center;
+}
+
+.tiles-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    z-index: 2; /* Above the background */
+}
+
 .tile {
     position: relative;
-    overflow: hidden;
     height: 150px;
+    background-color: #00509e;
     border-radius: 8px;
-    background-color: #00356b;
     color: white;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 3; /* Top-most */
 }
 
-.tile-content {
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.3s, transform 0.3s;
+.tile:hover {
+    z-index: 4; /* Ensure hovered tile stays above others temporarily */
 }
 
-.tile:hover .tile-content {
-    opacity: 1;
-    transform: translateY(0);
+.tile.hidden {
+    opacity: 0; /* Fades out non-hovered tiles */
 }
-
 
 
 .vertical-video-container {
