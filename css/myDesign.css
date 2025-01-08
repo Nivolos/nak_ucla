@@ -151,10 +151,11 @@ a:hover {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-top: 20px;
+    position: relative; /* Ensures expanded tiles stay within the container */
 }
 
 .tile {
-    position: relative;
+    position: relative; /* Default positioning for grid layout */
     overflow: hidden;
     height: 150px;
     border-radius: 8px;
@@ -166,6 +167,7 @@ a:hover {
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    z-index: 1; /* Ensures stacking of tiles is correct */
 }
 
 .tile-content {
@@ -180,9 +182,13 @@ a:hover {
 }
 
 .tile:hover {
-    background-color: #00509e;
-    height: 300px; /* Expand height on hover */
-    z-index: 10;
+    position: absolute; /* Expanded tile is positioned independently */
+    top: 0; /* Keeps the expanded tile in place */
+    left: 0; /* Ensures it doesn’t move with grid flow */
+    width: 100%; /* Full width for the expanded tile */
+    height: 300px; /* Expanded height */
+    z-index: 10; /* Brings the hovered tile to the front */
+    background-color: #00509e; /* Highlighted background color */
 }
 
 .tiles-container .tile:not(:hover) {
