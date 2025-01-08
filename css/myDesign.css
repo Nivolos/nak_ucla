@@ -151,13 +151,13 @@ a:hover {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-top: 20px;
-    position: relative; /* Keep the container intact */
-    height: 330px; /* Ensures a fixed height for the grid */
-    overflow: hidden; /* Prevents expanded tiles from affecting layout */
+    position: relative;
+    height: 330px;
+    overflow: hidden;
 }
 
 .tile {
-    position: relative; /* Default position within the grid */
+    position: relative;
     overflow: hidden;
     height: 150px;
     border-radius: 8px;
@@ -172,17 +172,6 @@ a:hover {
     z-index: 1;
 }
 
-.tile:hover {
-    position: absolute; /* Lift the hovered tile out of the grid */
-    top: 0; /* Expand relative to the container */
-    left: 0;
-    width: 100%; /* Full container width */
-    height: 100%; /* Full container height */
-    z-index: 10; /* Bring the hovered tile to the front */
-    background-color: #00509e;
-    transition: all 0.3s ease-in-out;
-}
-
 .tile-content {
     opacity: 0;
     transform: translateY(-20px);
@@ -194,10 +183,6 @@ a:hover {
     transform: translateY(0);
 }
 
-.tiles-container .tile:not(:hover) {
-    opacity: 0.3; /* Fades out non-hovered tiles */
-    transition: opacity 0.3s;
-}
 
 
 .vertical-video-container {
