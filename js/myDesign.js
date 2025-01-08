@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     activateLink();
 
     // Tile hover effect
-    document.addEventListener("DOMContentLoaded", function () {
     const tiles = document.querySelectorAll(".tile");
     const background = document.querySelector(".background-container");
 
@@ -46,6 +45,4 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
-});
-
 });
