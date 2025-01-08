@@ -26,10 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
             const top = rect.top - containerRect.top;
             const left = rect.left - containerRect.left;
 
-            // Apply dynamic positioning to the hovered tile
+            // Determine the directions to expand based on the tile's position
+            const isTopRow = top < containerRect.height / 2;
+            const isBottomRow = !isTopRow;
+            const isLeftColumn = left < containerRect.width / 2;
+            const isRightColumn = !isLeftColumn;
+
+            // Set position and size based on the tile's location
             tile.style.position = "absolute";
-            tile.style.top = `${top}px`;
-            tile.style.left = `${left}px`;
+            tile.style.top = isTopRow ? `${top}px` : `0`;
+            tile.style.left = isLeftColumn ? `${left}px` : `0`;
             tile.style.width = `${containerRect.width}px`;
             tile.style.height = `${containerRect.height}px`;
             tile.style.zIndex = "10";
