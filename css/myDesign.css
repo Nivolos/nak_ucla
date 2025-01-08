@@ -195,8 +195,8 @@ a:hover {
 
 .tile.fade-out {
     opacity: 0; /* Completely fade out the hovered tile */
-    pointer-events: none; /* Prevent interactions while faded */
-    transition: opacity 0.3s ease-in-out; /* Smooth fading */
+    pointer-events: auto; /* Keep the tile interactable for event handling */
+    transition: opacity 0.3s ease-in-out;
 }
 
 .tile.hidden {
