@@ -193,6 +193,12 @@ a:hover {
     z-index: 3; /* Top-most */
 }
 
+.tile.fade-out {
+    opacity: 0; /* Completely fade out the hovered tile */
+    pointer-events: none; /* Prevent interactions while faded */
+    transition: opacity 0.3s ease-in-out; /* Smooth fading */
+}
+
 .tile.hidden {
     opacity: 0; /* Fades out non-hovered tiles */
 }
