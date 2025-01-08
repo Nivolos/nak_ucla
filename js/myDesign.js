@@ -16,51 +16,36 @@ document.addEventListener("DOMContentLoaded", function () {
     activateLink();
 
     // Tile hover effect
-    document.querySelectorAll(".tile").forEach(tile => {
+    document.addEventListener("DOMContentLoaded", function () {
+    const tiles = document.querySelectorAll(".tile");
+    const background = document.querySelector(".background-container");
+
+    tiles.forEach(tile => {
         tile.addEventListener("mouseenter", () => {
-            const container = document.querySelector(".tiles-container");
-            const rect = tile.getBoundingClientRect();
-            const containerRect = container.getBoundingClientRect();
+            // Set the background container content
+            background.textContent = tile.textContent;
 
-            // Calculate the relative position of the tile within the container
-            const top = rect.top - containerRect.top;
-            const left = rect.left - containerRect.left;
+            // Show the background container
+            background.style.opacity = "1";
 
-            // Determine the directions to expand based on the tile's position
-            const isTopRow = top < containerRect.height / 2;
-            const isBottomRow = !isTopRow;
-            const isLeftColumn = left < containerRect.width / 2;
-            const isRightColumn = !isLeftColumn;
-
-            // Set position and size based on the tile's location
-            tile.style.position = "absolute";
-            tile.style.top = isTopRow ? `${top}px` : `0`;
-            tile.style.left = isLeftColumn ? `${left}px` : `0`;
-            tile.style.width = `${containerRect.width}px`;
-            tile.style.height = `${containerRect.height}px`;
-            tile.style.zIndex = "10";
-
-            // Hide other tiles
-            document.querySelectorAll(".tile").forEach(otherTile => {
+            // Fade out all other tiles
+            tiles.forEach(otherTile => {
                 if (otherTile !== tile) {
-                    otherTile.style.opacity = "0";
+                    otherTile.classList.add("hidden");
                 }
             });
         });
 
         tile.addEventListener("mouseleave", () => {
-            // Reset the tile's style on mouse leave
-            tile.style.position = "relative";
-            tile.style.top = "";
-            tile.style.left = "";
-            tile.style.width = "";
-            tile.style.height = "";
-            tile.style.zIndex = "";
+            // Hide the background container
+            background.style.opacity = "0";
 
-            // Show all tiles again
-            document.querySelectorAll(".tile").forEach(otherTile => {
-                otherTile.style.opacity = "1";
+            // Bring back all tiles
+            tiles.forEach(otherTile => {
+                otherTile.classList.remove("hidden");
             });
         });
     });
+});
+
 });
