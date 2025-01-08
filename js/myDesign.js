@@ -33,15 +33,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     otherTile.classList.add("hidden");
                 }
             });
+
+            // Fade out the hovered tile
+            tile.classList.add("fade-out");
         });
 
         tile.addEventListener("mouseleave", () => {
             // Hide the background container
             background.style.opacity = "0";
 
-            // Bring back all tiles
+            // Bring back all tiles, including the hovered tile
             tiles.forEach(otherTile => {
-                otherTile.classList.remove("hidden");
+                otherTile.classList.remove("hidden", "fade-out");
             });
         });
     });
