@@ -1,5 +1,5 @@
-// JavaScript for dynamic active section highlighting
 document.addEventListener("DOMContentLoaded", function () {
+    // Dynamic active section highlighting
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".section-nav .nav-link");
 
@@ -14,4 +14,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", activateLink);
     activateLink();
+
+    // Tile hover effect
+    document.querySelectorAll(".tile").forEach(tile => {
+        tile.addEventListener("mouseenter", () => {
+            document.querySelectorAll(".tile").forEach(otherTile => {
+                if (otherTile !== tile) {
+                    otherTile.style.display = "none";
+                }
+            });
+        });
+
+        tile.addEventListener("mouseleave", () => {
+            document.querySelectorAll(".tile").forEach(otherTile => {
+                otherTile.style.display = "flex";
+            });
+        });
+    });
 });
