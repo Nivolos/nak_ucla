@@ -147,12 +147,16 @@ a:hover {
 }
 
 .tiles-container {
-    position: relative;
-    width: 100%;
-    height: 330px;
-    border-radius: 8px;
-    overflow: hidden; /* Ensures content stays within the container */
+    position: relative; /* Ensure it is a positioning reference for children */
+    width: 100%; /* Should match its containing section */
+    height: 300px; /* Adjust height to fit the tile grid */
+    border-radius: 8px; /* Same as the background container */
+    overflow: hidden; /* Prevent child elements from overflowing */
+    box-sizing: border-box; /* Includes padding in its size */
+    padding: 0; /* Ensure no extra space is added inside */
+    margin: 0 auto; /* Center horizontally if needed */
 }
+
 
 .background-container {
     position: absolute;
