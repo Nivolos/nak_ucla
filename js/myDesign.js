@@ -25,6 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    .course-tiles-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible layout */
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+
     // Tile hover effect
     const tiles = document.querySelectorAll(".tile");
     const background = document.querySelector(".background-container");
