@@ -22,8 +22,17 @@ document.addEventListener("DOMContentLoaded", function () {
     if (menuToggle && navLinksContainer) {
         menuToggle.addEventListener("click", () => {
             navLinksContainer.classList.toggle("active");
+            // Ensure smooth toggle
+            menuToggle.setAttribute(
+                "aria-expanded",
+                navLinksContainer.classList.contains("active")
+            );
         });
-    }
+    }/*if (menuToggle && navLinksContainer) {
+        menuToggle.addEventListener("click", () => {
+            navLinksContainer.classList.toggle("active");
+        });
+    }*/
 
     .course-tiles-container {
         display: grid;
