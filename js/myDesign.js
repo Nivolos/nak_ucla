@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Tile hover effect
     const tiles = document.querySelectorAll(".tile");
     const background = document.querySelector(".background-container");
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
     tiles.forEach(tile => {
         tile.addEventListener("mouseenter", () => {
@@ -70,4 +71,34 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
+
+ if (isMobile) {
+        tiles.forEach((tile) => {
+            tile.addEventListener("click", () => {
+                // Collapse all other tiles
+                tiles.forEach((otherTile) => {
+                    if (otherTile !== tile) {
+                        otherTile.classList.remove("expanded");
+                    }
+                });
+
+                // Toggle the clicked tile
+                tile.classList.toggle("expanded");
+            });
+        });
+    } else {
+        // Keep desktop hover functionality
+        tiles.forEach((tile) => {
+            tile.addEventListener("mouseenter", () => {
+                // Add hover behavior
+                tile.classList.add("expanded");
+            });
+
+            tile.addEventListener("mouseleave", () => {
+                // Remove hover behavior
+                tile.classList.remove("expanded");
+            });
+        });
+    }
+    
 });
