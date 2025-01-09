@@ -236,8 +236,13 @@ a:hover {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     z-index: 3; /* Top-most */
+}
+
+.tile.expanded {
+    height: auto; /* Allow content to expand */
+    z-index: 10; /* Ensure it's above other tiles */
 }
 
 .tile.fade-out {
@@ -355,6 +360,20 @@ a:hover {
 
     .destination {
         padding: 20px; /* Optional: Add padding for better spacing on smaller screens */
+    }
+
+     .tile {
+        cursor: pointer; /* Change cursor to indicate interactivity */
+    }
+
+    /* Disable hover effects for mobile */
+    .tile:hover {
+        transform: none;
+    }
+
+    .tile.expanded {
+        height: auto; /* Expand the tile to fit content */
+        z-index: 10; /* Keep it on top */
     }
 }
 
