@@ -75,24 +75,6 @@ body {
     padding: 10px;
 }
 
-@media (max-width: 576px) {
-    .menu-toggle {
-        display: block; /* Show the button on smaller screens */
-    }
-
-    .nav-links {
-        display: none; /* Hide links by default */
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    .nav-links.active {
-        display: flex; /* Show links when active */
-    }
-}
-
-
 .section-nav .nav-link {
     color: #2a6eb4;
     text-decoration: none;
@@ -125,22 +107,6 @@ body {
     z-index: -1;
     transition: all 0.3s;
 }
-
-/* Responsive Navigation Bar Adjustments */
-@media (max-width: 768px) {
-    .section-nav {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center align links */
-        gap: 5px; /* Reduce spacing between links */
-    }
-        .section-nav .nav-link {
-        display: block;
-        text-align: center;
-        width: 100%; /* Take up full width for touch-friendliness */
-        padding: 15px 10px; /* Increase padding for easier tapping */
-    }
-}
-
 
 /* Content Container Styling */
 .content {
@@ -349,6 +315,51 @@ a:hover {
 }
 
 /* <!---------------- Exploring LA Section ----------------!> */
+
+
+/* <!---------------- Mobile Accessibility ----------------!> */
+@media (max-width: 576px) {
+    .menu-toggle {
+        display: block; /* Show the button on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+}
+
+/* Responsive Navigation Bar Adjustments */
+@media (max-width: 768px) {
+    .section-nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align links */
+        gap: 5px; /* Reduce spacing between links */
+    }
+        .section-nav .nav-link {
+        display: block;
+        text-align: center;
+        width: 100%; /* Take up full width for touch-friendliness */
+        padding: 15px 10px; /* Increase padding for easier tapping */
+    }
+    .exploring-destinations {
+        grid-template-columns: 1fr; /* Change to a single column on smaller screens */
+        gap: 15px; /* Adjust the gap for smaller screens if needed */
+    }
+
+    .destination {
+        padding: 20px; /* Optional: Add padding for better spacing on smaller screens */
+    }
+}
+
+/* <!---------------- Mobile Accessibility ----------------!> */
+
 
 .vertical-video-container {
     position: relative;
