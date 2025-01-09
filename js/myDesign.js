@@ -21,9 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     tiles.forEach(tile => {
         tile.addEventListener("mouseenter", () => {
+
+            const title = tile.textContent;
+            const content = tile.getAttribute("data-content");
             // Set the background container content
             background.textContent = tile.textContent;
 
+            background.innerHTML = `
+                <div class="background-title">${title}</div>
+                <div class="background-content">${content}</div>
+            `;
+            
             // Show the background container
             background.style.opacity = "1";
 
