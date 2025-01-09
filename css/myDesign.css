@@ -149,7 +149,7 @@ a:hover {
 .tiles-container {
     position: relative;
     width: 100%;
-    height: 330px;
+    height: 300px;
     border-radius: 8px;
     overflow: hidden; /* Ensures content stays within the container */
 }
