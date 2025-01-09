@@ -363,25 +363,39 @@ a:hover {
 
 
 /* <!---------------- Mobile Accessibility ----------------!> */
-@media (max-width: 576px) {
-    .menu-toggle {
-        display: block; /* Show the button on smaller screens */
-    }
-
-    .nav-links {
-        display: none; /* Hide links by default */
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    .nav-links.active {
-        display: flex; /* Show links when active */
-    }
-}
 
 /* Responsive Navigation Bar Adjustments */
 @media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block; /* Show hamburger menu button on mobile */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: none; /* Hide by default */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when toggled */
+    }
+
+    .nav-link {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+    }
     
     .section-nav {
         flex-direction: column; /* Stack items vertically */
