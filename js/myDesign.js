@@ -15,6 +15,16 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", activateLink);
     activateLink();
 
+    // Hamburger menu toggle for mobile
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinksContainer = document.querySelector(".nav-links");
+
+    if (menuToggle && navLinksContainer) {
+        menuToggle.addEventListener("click", () => {
+            navLinksContainer.classList.toggle("active");
+        });
+    }
+
     // Tile hover effect
     const tiles = document.querySelectorAll(".tile");
     const background = document.querySelector(".background-container");
@@ -24,6 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const title = tile.textContent;
             const content = tile.getAttribute("data-content");
+
+            console.log(`Title: ${title}, Content: ${content}`);
+            
             // Set the background container content
             background.textContent = tile.textContent;
 
@@ -31,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="background-title">${title}</div>
                 <div class="background-content">${content}</div>
             `;
+            console.log(background.innerHTML);
             
             // Show the background container
             background.style.opacity = "1";
