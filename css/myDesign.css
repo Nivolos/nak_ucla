@@ -173,17 +173,24 @@ a:hover {
     color: white;
     font-size: 24px;
     text-align: center;
+    overflow: hidden; /* Prevents content from spilling out */
+    word-wrap: break-word; /* Ensures long words are wrapped */
+    box-sizing: border-box; /* Includes padding in width and height */
 }
 
 .background-title {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 .background-content {
     font-size: 20px;
     line-height: 1.5;
+    word-wrap: break-word;
+    text-align: center;
 }
 
 .tiles-grid {
