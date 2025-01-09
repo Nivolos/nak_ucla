@@ -34,6 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }*/
 
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            if (window.innerWidth <= 768 && navLinksContainer.classList.contains("active")) {
+                navLinksContainer.classList.remove("active");
+            }
+        });
+    });
+
     .course-tiles-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible layout */
