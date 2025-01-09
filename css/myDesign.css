@@ -161,16 +161,29 @@ a:hover {
     width: 100%;
     height: 100%;
     background-color: #00356b;
-    border-radius: 8px;
-    z-index: 1; /* Below tiles */
+    border-radius: inherit; /* Match the container's corners */
+    z-index: 1; /* Below the tiles */
     opacity: 0; /* Initially invisible */
     transition: opacity 0.3s ease-in-out;
     display: flex;
+    flex-direction: column; /* Stack title and content */
     justify-content: center;
     align-items: center;
+    padding: 20px; /* Add spacing for readability */
     color: white;
     font-size: 24px;
     text-align: center;
+}
+
+.background-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.background-content {
+    font-size: 20px;
+    line-height: 1.5;
 }
 
 .tiles-grid {
