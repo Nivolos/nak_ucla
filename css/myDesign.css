@@ -73,6 +73,20 @@ body {
     cursor: pointer;
     margin: 10px;
     padding: 10px;
+    z-index: 1100;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-link.active {
+    color: white;
+    background-color: #2a6eb4;
+    border-radius: 4px;
+    padding: 10px;
 }
 
 .section-nav .nav-link {
@@ -369,20 +383,26 @@ a:hover {
 
     .menu-toggle {
         display: block; /* Show hamburger menu button on mobile */
-        background: none;
+/*        background: none;
         border: none;
         font-size: 24px;
         cursor: pointer;
         margin: 10px;
         padding: 10px;
-    }
+*/  }
 
     .nav-links {
-        display: none; /* Hide by default */
+        display: none; /* Hide navigation links by default */
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        background-color: #f0f4f8;
         width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1000;
+        padding: 10px 0;
+        border-top: 1px solid #ccc;
     }
 
     .nav-links.active {
