@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Dynamic active section highlighting
+// Dynamic active section highlighting
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".section-nav .nav-link");
+// Hamburger menu toggle for mobile
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinksContainer = document.querySelector(".nav-links");
 
     function activateLink() {
         let index = sections.length;
@@ -15,10 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", activateLink);
     activateLink();
 
-    // Hamburger menu toggle for mobile
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinksContainer = document.querySelector(".nav-links");
-
+// Mobile Menu Toggle
     if (menuToggle && navLinksContainer) {
         menuToggle.addEventListener("click", () => {
             navLinksContainer.classList.toggle("active");
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener("click", () => {
             if (window.innerWidth <= 768 && navLinksContainer.classList.contains("active")) {
                 navLinksContainer.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
             }
         });
     });
