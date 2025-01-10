@@ -458,22 +458,76 @@ a:hover {
 
 /* <!---------------- Mobile Accessibility ----------------!> */
 
+/* <!---------------- Media ----------------!> */
+/* General Section Styling */
+#media {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
+#media h2 {
+    color: #00356b; /* UCLA blue */
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#media p {
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Media Container Styling */
+.media-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    gap: 20px;
+    justify-content: center;
+}
+
+.media-item {
+    aspect-ratio: 16 / 9; /* Maintains 16:9 aspect ratio */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.media-item iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: inherit; /* Matches the container’s corners */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .media-container {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+        gap: 15px;
+    }
+}
+/*
 .vertical-video-container {
     position: relative;
     width: 100%;
-    max-width: 480px; /* Desired width of the cropped video */
-    height: 640px; /* Desired height to match vertical ratio */
-    overflow: hidden; /* Hide excess content */
+    max-width: 480px; /* Desired width of the cropped video *
+    height: 640px; /* Desired height to match vertical ratio *
+    overflow: hidden; /* Hide excess content *
 }
 
 .vertical-video-container iframe {
     position: absolute;
-    top: -20%; /* Adjust as needed to center the cropped portion */
+    top: -20%; /* Adjust as needed to center the cropped portion *
     left: 50%;
-    transform: translateX(-50%) scale(1.5); /* Zoom in to crop sides */
-    width: 100%; /* Full width of the container */
-    height: auto; /* Maintain aspect ratio */
+    transform: translateX(-50%) scale(1.5); /* Zoom in to crop sides *
+    width: 100%; /* Full width of the container *
+    height: auto; /* Maintain aspect ratio *
     min-height: 100%;
-    object-fit: cover; /* Ensures the content fills the container */
-}
+    object-fit: cover; /* Ensures the content fills the container *
+} */
