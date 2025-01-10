@@ -1,66 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Dynamic active section highlighting
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".section-nav .nav-link");
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinksContainer = document.querySelector(".nav-links");
-
-    function activateLink() {
-        let index = sections.length;
-
-        while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-
-        navLinks.forEach((link) => link.classList.remove("active"));
-        navLinks[index].classList.add("active");
-    }
-
-    window.addEventListener("scroll", activateLink);
-    activateLink();
-
-    // Mobile Menu Toggle
-    if (menuToggle && navLinksContainer) {
-        menuToggle.addEventListener("click", () => {
-            navLinksContainer.classList.toggle("active");
-            menuToggle.setAttribute(
-                "aria-expanded",
-                navLinksContainer.classList.contains("active")
-            );
-        });
-    }
-
-    navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            if (window.innerWidth <= 768 && navLinksContainer.classList.contains("active")) {
-                navLinksContainer.classList.remove("active");
-                menuToggle.setAttribute("aria-expanded", "false");
-            }
-        });
-    });
-
-    // Tile hover and click effects
     const tiles = document.querySelectorAll(".tile");
     const background = document.querySelector(".background-container");
 
+    // Function to reset all tiles and hide background content
     function resetTiles() {
         tiles.forEach((tile) => {
             tile.classList.remove("expanded", "hidden", "fade-out");
         });
-        background.style.opacity = "0";
+        if (background) {
+            background.style.opacity = "0";
+        }
     }
 
-    tiles.forEach((tile) => {
-        // Desktop hover functionality
-        tile.addEventListener("mouseenter", () => {
-            if (window.innerWidth > 768) {
+    // Desktop: Hover functionality
+    function enableDesktopTileEffects() {
+        tiles.forEach((tile) => {
+            tile.addEventListener("mouseenter", () => {
                 const title = tile.textContent;
                 const content = tile.getAttribute("data-content");
 
-                background.innerHTML = `
-                    <div class="background-title">${title}</div>
-                    <div class="background-content">${content}</div>
-                `;
-
-                background.style.opacity = "1";
+                if (background) {
+                    background.innerHTML = `
+                        <div class="background-title">${title}</div>
+                        <div class="background-content">${content}</div>
+                    `;
+                    background.style.opacity = "1";
+                }
 
                 tiles.forEach((otherTile) => {
                     if (otherTile !== tile) {
@@ -69,32 +34,53 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 tile.classList.add("fade-out");
-            }
-        });
+            });
 
-        tile.addEventListener("mouseleave", () => {
-            if (window.innerWidth > 768) {
+            tile.addEventListener("mouseleave", () => {
                 resetTiles();
-            }
+            });
         });
+    }
 
-        // Mobile click functionality
-        tile.addEventListener("click", () => {
-            if (window.innerWidth <= 768) {
+    // Mobile: Click functionality
+    function enableMobileTileEffects() {
+        tiles.forEach((tile) => {
+            tile.addEventListener("click", () => {
                 const isExpanded = tile.classList.contains("expanded");
 
-                // Reset all tiles
+                // Reset all tiles first
                 resetTiles();
 
+                // Expand clicked tile only if it was not already expanded
                 if (!isExpanded) {
                     tile.classList.add("expanded");
                 }
-            }
+            });
         });
-    });
+    }
 
-    // Reset on window resize
-    window.addEventListener("resize", () => {
-        resetTiles();
-    });
+    // Check screen size and enable appropriate functionality
+    function updateTileFunctionality() {
+        const isMobile = window.innerWidth <= 768;
+
+        // Remove all event listeners to avoid duplication
+        tiles.forEach((tile) => {
+            tile.replaceWith(tile.cloneNode(true));
+        });
+
+        // Reattach the tiles after clearing event listeners
+        const newTiles = document.querySelectorAll(".tile");
+
+        if (isMobile) {
+            enableMobileTileEffects();
+        } else {
+            enableDesktopTileEffects();
+        }
+    }
+
+    // Apply the initial functionality
+    updateTileFunctionality();
+
+    // Update functionality on window resize
+    window.addEventListener("resize", updateTileFunctionality);
 });
