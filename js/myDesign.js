@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-// Dynamic active section highlighting
+    // Dynamic active section highlighting
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".section-nav .nav-link");
-// Hamburger menu toggle for mobile
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinksContainer = document.querySelector(".nav-links");
 
@@ -18,21 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", activateLink);
     activateLink();
 
-// Mobile Menu Toggle
+    // Mobile Menu Toggle
     if (menuToggle && navLinksContainer) {
         menuToggle.addEventListener("click", () => {
             navLinksContainer.classList.toggle("active");
-            // Ensure smooth toggle
             menuToggle.setAttribute(
                 "aria-expanded",
                 navLinksContainer.classList.contains("active")
             );
         });
-    }/*if (menuToggle && navLinksContainer) {
-        menuToggle.addEventListener("click", () => {
-            navLinksContainer.classList.toggle("active");
-        });
-    }*/
+    }
 
     navLinks.forEach((link) => {
         link.addEventListener("click", () => {
@@ -43,88 +37,64 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    .course-tiles-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible layout */
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-
-    // Tile hover effect
+    // Tile hover and click effects
     const tiles = document.querySelectorAll(".tile");
     const background = document.querySelector(".background-container");
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-    tiles.forEach(tile => {
-        tile.addEventListener("mouseenter", () => {
-
-            const title = tile.textContent;
-            const content = tile.getAttribute("data-content");
-
-            console.log(`Title: ${title}, Content: ${content}`);
-            
-            // Set the background container content
-            background.textContent = tile.textContent;
-
-            background.innerHTML = `
-                <div class="background-title">${title}</div>
-                <div class="background-content">${content}</div>
-            `;
-            console.log(background.innerHTML);
-            
-            // Show the background container
-            background.style.opacity = "1";
-
-            // Fade out all other tiles
-            tiles.forEach(otherTile => {
-                if (otherTile !== tile) {
-                    otherTile.classList.add("hidden");
-                }
-            });
-
-            // Fade out the hovered tile
-            tile.classList.add("fade-out");
-        });
-
-        tile.addEventListener("mouseleave", () => {
-            // Hide the background container
-            background.style.opacity = "0";
-
-            // Bring back all tiles, including the hovered tile
-            tiles.forEach(otherTile => {
-                otherTile.classList.remove("hidden", "fade-out");
-            });
-        });
-    });
-
- if (isMobile) {
+    function resetTiles() {
         tiles.forEach((tile) => {
-            tile.addEventListener("click", () => {
-                // Collapse all other tiles
+            tile.classList.remove("expanded", "hidden", "fade-out");
+        });
+        background.style.opacity = "0";
+    }
+
+    tiles.forEach((tile) => {
+        // Desktop hover functionality
+        tile.addEventListener("mouseenter", () => {
+            if (window.innerWidth > 768) {
+                const title = tile.textContent;
+                const content = tile.getAttribute("data-content");
+
+                background.innerHTML = `
+                    <div class="background-title">${title}</div>
+                    <div class="background-content">${content}</div>
+                `;
+
+                background.style.opacity = "1";
+
                 tiles.forEach((otherTile) => {
                     if (otherTile !== tile) {
-                        otherTile.classList.remove("expanded");
+                        otherTile.classList.add("hidden");
                     }
                 });
 
-                // Toggle the clicked tile
-                tile.classList.toggle("expanded");
-            });
+                tile.classList.add("fade-out");
+            }
         });
-    } else {
-        // Keep desktop hover functionality
-        tiles.forEach((tile) => {
-            tile.addEventListener("mouseenter", () => {
-                // Add hover behavior
-                tile.classList.add("expanded");
-            });
 
-            tile.addEventListener("mouseleave", () => {
-                // Remove hover behavior
-                tile.classList.remove("expanded");
-            });
+        tile.addEventListener("mouseleave", () => {
+            if (window.innerWidth > 768) {
+                resetTiles();
+            }
         });
-    }
-    
+
+        // Mobile click functionality
+        tile.addEventListener("click", () => {
+            if (window.innerWidth <= 768) {
+                const isExpanded = tile.classList.contains("expanded");
+
+                // Reset all tiles
+                resetTiles();
+
+                if (!isExpanded) {
+                    tile.classList.add("expanded");
+                }
+            }
+        });
+    });
+
+    // Reset on window resize
+    window.addEventListener("resize", () => {
+        resetTiles();
+    });
 });
