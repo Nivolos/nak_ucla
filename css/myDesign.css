@@ -209,7 +209,7 @@ a:hover {
     transition: opacity 0.3s, transform 0.3s;
 }
 
-.tile:hover .background-container {
+.tile:hover ~ .background-container {
     opacity: 1;
 }
 
