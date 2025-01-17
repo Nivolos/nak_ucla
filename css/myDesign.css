@@ -368,6 +368,21 @@ a:hover {
 /* ==============================================================================
                               MEDIA AND VIDEOS
 ============================================================================== */
+.instagram-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adds spacing between posts */
+    padding: 20px; /* Adds padding around the container */
+}
+
+.instagram-posts blockquote {
+    max-width: 540px;
+    width: 100%;
+    margin: auto; /* Center align posts */
+}
+
+
 /* Responsive video container */
 .video-wrapper {
     margin: 20px 0; /* Add vertical spacing between videos */
