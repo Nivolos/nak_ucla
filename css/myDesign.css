@@ -417,9 +417,30 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
-    .course-tiles-container {
+   /* .course-tiles-container {
         grid-template-columns: 1fr;
+    } */
+
+    .tiles-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
+        gap: 15px; /* Adjust spacing between tiles if needed */
     }
+
+    @media (max-width: 480px) {
+        .tiles-grid {
+            grid-template-columns: 1fr; /* Stack tiles vertically on smaller devices */
+        }
+    }
+
+    .tile {
+        height: auto; /* Let height adjust naturally based on content */
+    }
+
+    .background-container {
+        display: none; /* Optionally disable hover effects on mobile */
+    }
+
+
 
     .menu-toggle {
         display: block;
