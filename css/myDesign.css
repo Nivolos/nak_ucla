@@ -274,6 +274,7 @@ a:hover {
 }
 
 .destination {
+    position: relative;
     background-size: cover;
     background-position: center;
     border-radius: 8px;
@@ -285,6 +286,18 @@ a:hover {
     justify-content: flex-end;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    transition: filter 0.3s ease-in-out;
+}
+
+.destination:hover {
+   filter: blur(5px);
+}
+
+@media (max-width: 768px) {
+   .destination {
+      filter: blur(5px); /* Blur always active on smaller screen */
+   }
 }
 
 .destination:nth-child(1) {
