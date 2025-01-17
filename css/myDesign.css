@@ -226,7 +226,7 @@ a:hover {
     transition: opacity 0.3s ease-in-out;
     display: flex;
     flex-direction: column;       /* Stack title and content vertically */
-    justify-content: flex-start;  /* Aligning items to top */
+    justify-content: center;  /* Aligning items to top */
     align-items: center;          /* Centering horizintally */
     color: white;
     text-align: center;
