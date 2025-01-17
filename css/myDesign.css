@@ -231,8 +231,10 @@ a:hover {
     color: white;
     text-align: center;
     padding: 20px;
+    box-sizing: border-box;
     pointer-events: none;
     cursor: pointer; /* Indicate interactivity */
+    transform: translate(-50%. -50%);
 }
 
 .background-title {
