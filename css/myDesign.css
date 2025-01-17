@@ -230,6 +230,7 @@ a:hover {
     color: white;
     text-align: center;
     padding: 20px;
+    pointer-events: none;
     cursor: pointer; /* Indicate interactivity */
 }
 
