@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         if (background) {
             background.style.opacity = "0";
+            background.style.pointerEvents = "none"; //Disable clicks on the background
             background.innerHTML = ""; // Clear overlay content
         }
     }
@@ -72,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="background-content">${content}</div>
                 `;
                 background.style.opacity = "1";
+                background.style.pointerEvents = "auto"; // Enable clicks on the background
             }
 
             // Hide other tiles except the clicked one
