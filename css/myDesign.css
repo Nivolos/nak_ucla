@@ -225,13 +225,32 @@ a:hover {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;       /* Stack title and content vertically */
+    justify-content: flex-start;  /* Aligning items to top */
+    align-items: center;          /* Centering horizintally */
     color: white;
     text-align: center;
     padding: 20px;
     pointer-events: none;
     cursor: pointer; /* Indicate interactivity */
+}
+
+.background-title {
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold;
+    margin-bottom: 10px; /* Space between title and content */
+    text-align: center;
+    word-wrap: break-word; /* Handle long titles */
+}
+
+.background-content {
+    font-size: 18px; /* Adjust font size as needed */
+    line-height: 1.5; /* Improve readability */
+    word-wrap: break-word; /* Prevent overflow */
+    overflow-y: auto; /* Add scroll if content exceeds available space */
+    max-height: calc(100% - 50px); /* Prevent content from exceeding the container */
+    text-align: center;
+    padding: 10px 20px; /* Adjust padding for better spacing */
 }
 
 
