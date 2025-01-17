@@ -209,9 +209,9 @@ a:hover {
     transition: opacity 0.3s, transform 0.3s;
 }
 
-.tile:hover ~ .background-container {
+/*.tile:hover ~ .background-container {
     opacity: 1;
-}
+}*/
 
 .background-container {
     position: absolute;
@@ -219,7 +219,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #00356b;
+    background-color: rgba(0, 53, 107, 0.9); /* Semi-transparent for better focus */
     border-radius: inherit;
     z-index: 1;
     opacity: 0;
@@ -230,7 +230,9 @@ a:hover {
     color: white;
     text-align: center;
     padding: 20px;
+    cursor: pointer; /* Indicate interactivity */
 }
+
 
 /* ==========================
    EXPLORING LA
