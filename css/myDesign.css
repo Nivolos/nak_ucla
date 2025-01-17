@@ -417,9 +417,9 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
-   /* .course-tiles-container {
+    .course-tiles-container {
         grid-template-columns: 1fr;
-    } */
+    } 
 
     .tiles-grid {
         grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
