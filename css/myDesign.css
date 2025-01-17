@@ -176,9 +176,9 @@ a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* ==========================
-   UCLA CAMPUS LIFE
-========================== */
+/* ==============================================================================
+                              UCLA CAMPUS LIFE
+============================================================================== */
 .tiles-container {
     position: relative;
     width: 100%;
@@ -256,9 +256,9 @@ a:hover {
 }
 
 
-/* ==========================
-   EXPLORING LA
-========================== */
+/* ==============================================================================
+                              EXPLORING LA
+============================================================================== */
 #exploring-la {
     margin-top: 40px;
     padding: 20px;
@@ -365,10 +365,33 @@ a:hover {
     margin-top: 30px;
 }
 
-/* ==========================
-   RESPONSIVE STYLES
-========================== */
+/* ==============================================================================
+                              MEDIA AND VIDEOS
+============================================================================== */
+/* Responsive video container */
+.video-container {
+    position: relative;
+    width: 100%; /* Full width of the parent container */
+    padding-top: 56.25%; /* Aspect ratio: 16:9 (height / width = 9 / 16 = 0.5625) */
+    overflow: hidden; /* Hide overflow content */
+    max-width: 100%; /* Ensure it doesn't exceed its parent container */
+}
+
+/* Embedded iframe */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Scale the iframe to the container width */
+    height: 100%; /* Maintain the aspect ratio */
+    border: none; /* Remove iframe border */
+}
+
+/* ==============================================================================
+                              RESPONSIVE STYLES
+============================================================================== */
 @media (max-width: 768px) {
+   
     .exploring-destinations {
         grid-template-columns: 1fr;
     }
