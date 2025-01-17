@@ -234,7 +234,7 @@ a:hover {
     box-sizing: border-box;
     pointer-events: none;
     cursor: pointer; /* Indicate interactivity */
-    transform: translate(-50%. -50%);
+    transform: translate(-50%, -50%);
 }
 
 .background-title {
