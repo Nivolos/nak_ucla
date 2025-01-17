@@ -275,7 +275,7 @@ a:hover {
 
 .destination {
     position: relative;
-    overflow: hidden; /* Ensure nothing overflows the tile bounds */
+    overflow: hidden; /* Ensure content doesn't spill outside */
     border-radius: 8px;
     color: white;
     padding: 20px;
@@ -285,44 +285,13 @@ a:hover {
     justify-content: flex-end;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Improve text readability */
-    z-index: 1; /* Ensure content is above pseudo-element */
-}
-
-/* Add the background image as a separate layer */
-.destination::before {
-    content: ""; /* Empty content for the pseudo-element */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: inherit; /* Use the same image as the tile */
+    z-index: 1; /* Ensure content stays above pseudo-element */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(0px); /* No blur by default */
-    transition: filter 0.3s ease-in-out;
-    z-index: 0; /* Place the pseudo-element behind the text */
 }
 
-/* Ensure text and content are above the background */
-.destination > * {
-    position: relative;
-    z-index: 1;
-}
-
-/* Blur effect on hover for desktop */
-.destination:hover::before {
-    filter: blur(5px); /* Apply blur only to the background image */
-}
-
-/* Always blur on mobile */
-@media (max-width: 768px) {
-    .destination::before {
-        filter: blur(5px); /* Always blur on smaller screens */
-    }
-}
-
+/* Unique background images for each destination */
 .destination:nth-child(1) {
     background-image: url('images/santa-monica.jpg');
 }
@@ -353,6 +322,41 @@ a:hover {
 
 .destination:nth-child(8) {
     background-image: url('images/malibu.jpeg');
+}
+
+/* Pseudo-element for applying blur */
+.destination::before {
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; /* Inherit background image from parent */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(0px); /* Default: No blur */
+    transition: filter 0.3s ease-in-out;
+    z-index: 0; /* Place the pseudo-element behind the content */
+}
+
+/* Ensure the text content stays above the blurred background */
+.destination > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover effect for desktop: Apply blur only to the pseudo-element */
+.destination:hover::before {
+    filter: blur(5px); /* Apply blur to the pseudo-element */
+}
+
+/* Always blur on mobile */
+@media (max-width: 768px) {
+    .destination::before {
+        filter: blur(5px); /* Always apply blur on smaller screens */
+    }
 }
 
 .exploring-advice {
