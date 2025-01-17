@@ -40,55 +40,76 @@ document.addEventListener("DOMContentLoaded", function () {
     // Campus Life: Tile click interaction
     const tiles = document.querySelectorAll(".tile");
     const background = document.querySelector(".background-container");
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
     // Function to reset all tiles and hide the overlay
     function resetTiles() {
         tiles.forEach((tile) => {
-            tile.classList.remove("hidden", "fade-out");
+            tile.classList.remove("hidden", "fade-out", "expanded");
         });
         if (background) {
             background.style.opacity = "0";
-            background.style.pointerEvents = "none"; //Disable clicks on the background
+            background.style.pointerEvents = "none"; // Disable clicks on the background
             background.innerHTML = ""; // Clear overlay content
         }
     }
 
-    // Add click event listeners to tiles
-    tiles.forEach((tile) => {
-        tile.addEventListener("click", () => {
-            // If background is already visible, reset tiles
-            if (background.style.opacity === "1") {
-                resetTiles();
-                return;
-            }
+    // Add interaction for tiles
+    if (isMobile) {
+        // For mobile: Toggle content on click
+        tiles.forEach((tile) => {
+            tile.addEventListener("click", () => {
+                // Collapse all other tiles
+                tiles.forEach((otherTile) => {
+                    if (otherTile !== tile) {
+                        otherTile.classList.remove("expanded");
+                    }
+                });
 
-            // Get the tile's content
-            const title = tile.textContent;
-            const content = tile.getAttribute("data-content");
-
-            // Update the overlay content and make it visible
-            if (background) {
-                background.innerHTML = `
-                    <div class="background-title">${title}</div>
-                    <div class="background-content">${content}</div>
-                `;
-                background.style.opacity = "1";
-                background.style.pointerEvents = "auto"; // Enable clicks on the background
-            }
-
-            // Hide other tiles except the clicked one
-            tiles.forEach((otherTile) => {
-                if (otherTile !== tile) {
-                    otherTile.classList.add("hidden");
+                // Toggle the clicked tile
+                tile.classList.toggle("expanded");
+                const content = tile.getAttribute("data-content");
+                if (tile.classList.contains("expanded")) {
+                    tile.innerHTML = `<div class="background-title">${tile.textContent}</div>
+                                      <div class="background-content">${content}</div>`;
+                } else {
+                    tile.innerHTML = tile.dataset.title;
                 }
             });
-
-            tile.classList.add("fade-out");
         });
-    });
+    } else {
+        // For desktop: Hover interaction
+        tiles.forEach((tile) => {
+            tile.addEventListener("mouseenter", () => {
+                const title = tile.textContent;
+                const content = tile.getAttribute("data-content");
 
-    // Close overlay when clicking anywhere on the background
-    if (background) {
-        background.addEventListener("click", resetTiles);
+                if (background) {
+                    background.innerHTML = `
+                        <div class="background-title">${title}</div>
+                        <div class="background-content">${content}</div>
+                    `;
+                    background.style.opacity = "1";
+                    background.style.pointerEvents = "auto"; // Enable clicks on the background
+                }
+
+                tiles.forEach((otherTile) => {
+                    if (otherTile !== tile) {
+                        otherTile.classList.add("hidden");
+                    }
+                });
+
+                tile.classList.add("fade-out");
+            });
+
+            tile.addEventListener("mouseleave", () => {
+                resetTiles();
+            });
+        });
+
+        // Close overlay when clicking anywhere on the background
+        if (background) {
+            background.addEventListener("click", resetTiles);
+        }
     }
 });
