@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Dynamic active section highlighting
+    // Navigation Bar: Highlight the active section
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".section-nav .nav-link");
     const menuToggle = document.querySelector(".menu-toggle");
@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
         navLinks[index].classList.add("active");
     }
 
-    // Highlight the current section in the navigation bar
     window.addEventListener("scroll", activateLink);
     activateLink();
 
@@ -38,26 +37,35 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Tile hover effect for desktop
+    // Campus Life: Tile click interaction
     const tiles = document.querySelectorAll(".tile");
     const background = document.querySelector(".background-container");
 
-    // Function to reset all tiles and hide background content
+    // Function to reset all tiles and hide the overlay
     function resetTiles() {
         tiles.forEach((tile) => {
             tile.classList.remove("hidden", "fade-out");
         });
         if (background) {
             background.style.opacity = "0";
+            background.innerHTML = ""; // Clear overlay content
         }
     }
 
-    // Enable hover functionality for desktop
+    // Add click event listeners to tiles
     tiles.forEach((tile) => {
-        tile.addEventListener("mouseenter", () => {
+        tile.addEventListener("click", () => {
+            // If background is already visible, reset tiles
+            if (background.style.opacity === "1") {
+                resetTiles();
+                return;
+            }
+
+            // Get the tile's content
             const title = tile.textContent;
             const content = tile.getAttribute("data-content");
 
+            // Update the overlay content and make it visible
             if (background) {
                 background.innerHTML = `
                     <div class="background-title">${title}</div>
@@ -66,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 background.style.opacity = "1";
             }
 
+            // Hide other tiles except the clicked one
             tiles.forEach((otherTile) => {
                 if (otherTile !== tile) {
                     otherTile.classList.add("hidden");
@@ -74,9 +83,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             tile.classList.add("fade-out");
         });
-
-        tile.addEventListener("mouseleave", () => {
-            resetTiles();
-        });
     });
+
+    // Close overlay when clicking anywhere on the background
+    if (background) {
+        background.addEventListener("click", resetTiles);
+    }
 });
