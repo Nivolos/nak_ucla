@@ -329,35 +329,35 @@ a:hover {
 }
 
 .destination:nth-child(1) {
-    background-image: url('.images/santa-monica.jpg');
+    background-image: url('images/santa-monica.jpg');
 }
 
 .destination:nth-child(2) {
-    background-image: url('.images/marina-del-rey.jpg');
+    background-image: url('images/marina-del-rey.jpg');
 }
 
 .destination:nth-child(3) {
-    background-image: url('.images/getty-museum.jpg');
+    background-image: url('images/getty-museum.jpg');
 }
 
 .destination:nth-child(4) {
-    background-image: url('.images/beverly-hills.jpg');
+    background-image: url('images/beverly-hills.jpg');
 }
 
 .destination:nth-child(5) {
-    background-image: url('.images/downtown-la.jpg');
+    background-image: url('images/downtown-la.jpg');
 }
 
 .destination:nth-child(6) {
-    background-image: url('.images/compton.jpeg');
+    background-image: url('images/compton.jpeg');
 }
 
 .destination:nth-child(7) {
-    background-image: url('.images/universal-studios2.jpg');
+    background-image: url('images/universal-studios2.jpg');
 }
 
 .destination:nth-child(8) {
-    background-image: url('.images/malibu.jpeg');
+    background-image: url('images/malibu.jpeg');
 }
 
 .exploring-advice {
