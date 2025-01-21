@@ -176,6 +176,22 @@ a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+.download-all-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.download-all-link a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.download-all-link a:hover {
+    text-decoration: underline;
+}
+
+
 /* ==============================================================================
                               UCLA CAMPUS LIFE
 ============================================================================== */
