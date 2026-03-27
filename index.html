@@ -4,241 +4,408 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Quarter at UCLA</title>
-    <base href="https://nivolos.github.io/nak_ucla/">
-    <link rel="icon" href="images/icon512.PNG" size="512x512" type="image/png">
+    <meta
+        name="description"
+        content="A personal UCLA experience told as an editorial, cinematic journey through academics, campus life, Los Angeles, and reflection."
+    >
+    <link rel="icon" href="images/icon512.PNG" sizes="512x512" type="image/png">
     <link rel="stylesheet" href="css/myDesign.css">
 </head>
 <body>
+<header class="site-header">
+    <a class="brand" href="#hero" aria-label="A Quarter at UCLA">
+        <span class="brand-mark">UCLA</span>
+        <span class="brand-copy">A Quarter at UCLA</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Toggle navigation</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Section navigation">
+        <a href="#context">Why UCLA</a>
+        <a href="#overview">At a Glance</a>
+        <a href="#academics">Academics</a>
+        <a href="#campus-life">Campus Life</a>
+        <a href="#los-angeles">Los Angeles</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#reflection">Reflection</a>
+    </nav>
+</header>
 
-    <!--------------------------------------------------------------------------->
-    <!------------------------- Custom Banner ----------------------------------->
-<div class="custom-banner">
-    <span class="banner-logo">UCLA</span>
-    <div class="logo-container">
-        <img src="images/nordakademie-logo.png" alt="Nordakademie Logo" class="banner-nak-logo">
-    </div>
-</div>
-
-    <!---------------------------------------------------------------------------->
-    <!------------------------- Navigation Bar ----------------------------------->
-<nav class="section-nav">
-    <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
-    <div class="nav-links">
-        <a href="#introduction" class="nav-link">Introduction</a>
-        <a href="#academics" class="nav-link">Academic Highlights</a>
-        <a href="#campus-life" class="nav-link">Campus Life</a>
-        <a href="#exploring-la" class="nav-link">Exploring Los Angeles</a>
-        <a href="#media" class="nav-link">Media Highlights</a>
-        <a href="#reflection" class="nav-link">Reflection</a>
-    </div>
-</nav>
-
-
-    <!-------------------------------------------------------------------------->
-    <!------------------------- Main Content ----------------------------------->
-<div class="content">
-    <h1 class="title">A Quarter at UCLA</h1>
-    <p>Disclaimer: This is a constant work in progress - I dont know what I'm doing but I'll figure it out along the way. <br>
-        If anything isnt working, there should be a way of letting me know eventually - hopefully. </p>
-
-    <!-- Introduction Section -->
-    <section id="introduction">
-        <h2>Introduction</h2>
-        <p>
-            Well, starting off, I definitely did not prepare early enough.
-            Most of what I had to do was done roughly a month or two before the start of my quarter at UCLA.<br><br>
-            To take a step back:<br>
-            At the NAK we all have the not entirely normal, yet typical, <em>half-year</em> semester. This is not the case at UCLA or in most universities in the States, for that matter.<br>
-            Here, mostly everything is based on the quarterly system (<em>which, as a side note, is a subjectively preferable choice</em>).<br>
-            On a side note - here is the <a href="https://cis.nordakademie.de/index.php?eID=dumpFile&t=f&f=9823&token=9d0bb8990ae05085e2ca0add2a2f2e71384de1c6">presentation</a> from the NAK about the UCLA
-        </p>
-    </section>
-
-    <!-------------------------------------------------------------------------------->
-    <!------------------------- Academic Highlights ---------------------------------->
-    <section id="academics">
-        <h2>Academic Highlights</h2>
-        <p>
-            Generally, at UCLA, you have a lot of choices from the UCLA Extension program.<br>
-            They are pricey, though, so here is what I chose:
-        </p>
-        <div class="course-tiles-container">
-            <a href="principles-of-macroeconomics.html" class="course-tile">
-                <h3>Principles of Macroeconomics</h3>
-                <p>$722</p>
-            </a>
-            <a href="global-supply-chain-management.html" class="course-tile">
-                <h3>Global Supply Chain Management</h3>
-                <p>$855</p>
-            </a>
-            <a href="cost-accounting-analysis.html" class="course-tile">
-                <h3>Cost Accounting & Analysis</h3>
-                <p>$855</p>
-            </a>
-            <a href="html-css.html" class="course-tile">
-                <h3>HTML & CSS</h3>
-                <p>$1095</p>
-            </a>
+<main class="experience-page">
+    <section id="hero" class="section section-hero">
+        <div class="hero-media-wrap">
+            <img
+                class="hero-media"
+                src="images/getty-museum.jpg"
+                alt="A sunlit view across Los Angeles from the Getty Museum"
+                fetchpriority="high"
+            >
+            <div class="hero-media-overlay"></div>
         </div>
-        <p class="download-all-link">
-            <a href="all-courses.html">Download all course materials</a>
-        </p>
-        <p>
-            I chose the first three based on subjects/classes that are mandatory in the Business-IT curriculum of the NAK.<br>
-            HTML & CSS is one of the 3 mandatory free-choices, which in turns mean 2 more choices are waiting for me in Germany.
-        </p>
-        <h3>Learning Agreements</h3>
-        <p>
-            I completed the <a href="https://cis.nordakademie.de/index.php?eID=dumpFile&t=f&f=958&token=678c50b5929266bd0d9884cf679fd5cac0253973">learning agreement</a> way too late—about a month before my flight. But the NAK employees came through and checked my learning agreements within days, ensuring I was all set for my UCLA courses.<br>
-            Don't forget that these can be mandatory to be able to get the grades of the chosen abroad classes acknowledged. This depends on if your chosen subjects are already on the List of equivalence (<a href="https://cis.nordakademie.de/index.php?eID=dumpFile&t=f&f=9997&token=1b59e9d3de844999b3ea27d644750d6cb73872e7"> Äquivalenzliste</a>)
-        </p>
+        <div class="hero-content shell">
+            <p class="eyebrow reveal">UCLA Extension / Los Angeles / Personal Experience</p>
+            <h1 class="hero-title reveal">A Quarter at UCLA</h1>
+            <p class="hero-subtitle reveal">
+                Three months that started with academics and ended up changing how I think about scale,
+                independence, and what a city can feel like.
+            </p>
+            <div class="hero-meta reveal">
+                <span>From Nordakademie to Los Angeles</span>
+                <span>Study, city, motion, memory</span>
+            </div>
+        </div>
+        <a class="scroll-cue" href="#context" aria-label="Scroll to the next section">
+            <span class="scroll-label">Scroll</span>
+            <span class="scroll-line"></span>
+        </a>
     </section>
 
-    <!-------------------------------------------------------------------------------->
-    <!------------------------- Campus Life Section ---------------------------------->
-    <section id="campus-life">
-        <h2>Campus Life</h2>
-        <div class="tiles-container">
-            <div class="background-container"></div>
-            <div class="tiles-grid">
-                <div class="tile" id="tile-1" data-content="Nordakademie is pretty small and personal, which has its perks—you get to know everyone, and the professors are super approachable. UCLA, on the other hand, is massive. We’re talking over 45,000 students from all around the world. It’s a cultural melting pot, which makes it exciting but probably a bit overwhelming if you’re used to Nordakademie’s more intimate vibe.">Diversity</div>
-                <div class="tile" id="tile-2" data-content="UCLA has over 1,000 clubs—seriously, there’s a group for just about anything. Whether it’s sports, coding, or even surfing, there’s something happening every day. Nordakademie has student clubs too, but on a much smaller scale. The variety at UCLA would be amazing, but it might also feel a bit chaotic compared to the more straightforward setup back home.">Clubs & Activities</div>
-                <div class="tile" id="tile-3" data-content="Most students at UCLA live in dorms on campus, which are super social and have their own dining halls. It’s like living in a buzzing little community. At Nordakademie, most of us commute or live off-campus, which gives a bit more independence. Living at UCLA would be more of a full-on university experience, with constant activities and people around.">On-Campus Living</div>
-                <div class="tile" id="tile-4" data-content="UCLA’s campus feels like a whole city. There are libraries, gyms, swimming pools, and iconic spots like Royce Hall. At Nordakademie, the campus is much smaller and more focused—you’ve got what you need without getting lost. UCLA’s scale would definitely be a big change, but it also means there’s always something new to explore.">Facilities</div>
-                <div class="tile" id="tile-5" data-content="UCLA is crazy about sports. They have huge games, especially basketball and football, that bring thousands of students together. It’s all about school spirit. Nordakademie doesn’t really have that kind of sports culture—it’s more low-key. If you’re into the idea of big stadium vibes, UCLA would be a whole new level.">Sports</div>
-                <div class="tile" id="tile-6" data-content="UCLA is known for its amazing dining halls. You’ll find everything from burgers to international dishes, and it’s all really high quality. Nordakademie’s food setup is a lot simpler, more about getting the job done. UCLA’s food scene would definitely feel like an upgrade if you’re into variety.">Food & Dining</div>
-                <div class="tile" id="tile-7" data-content="UCLA is huge on academics, with tons of libraries, research opportunities, and famous professors. Nordakademie, though, balances academics with real-world experience through internships and smaller classes. UCLA has way more options, but you might miss that personalized support we’re used to at Nordakademie.">Academics</div>
-                <div class="tile" id="tile-8" data-content="Nordakademie is in Elmshorn—a calm, practical spot close to Hamburg. UCLA? It’s in Los Angeles. Think beaches, Hollywood, and endless things to do. While Nordakademie offers a quieter, focused environment, UCLA throws you into the middle of a vibrant city with non-stop action.">Exploration</div>
+    <section id="context" class="section section-context">
+        <div class="shell shell-grid shell-grid--context">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Why UCLA</p>
+                <h2>The quarter was never just about taking classes abroad.</h2>
+            </div>
+            <div class="section-copy reveal">
+                <p>
+                    I chose UCLA because it promised more than a change of campus. It offered a different rhythm,
+                    a different academic environment, and a city with enough scale to make every day feel open-ended.
+                    Coming from Germany and a much smaller university setting, Los Angeles represented exactly the kind
+                    of contrast that makes an experience memorable.
+                </p>
+                <p>
+                    What made the quarter meaningful was not only where I studied, but how completely the setting
+                    shifted my perspective. UCLA gave structure to the experience. Los Angeles gave it atmosphere.
+                </p>
+            </div>
+            <aside class="context-aside reveal">
+                <div class="context-card tilt-card" data-tilt>
+                    <img
+                        src="images/marina-del-rey.jpg"
+                        alt="Boats and calm water at Marina del Rey in warm light"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                    <div class="context-card-copy">
+                        <p class="context-card-label">Personal Context</p>
+                        <p class="context-card-text">
+                            A quarter framed by contrast: smaller-campus habits on one side, LA scale on the other.
+                        </p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section id="overview" class="section section-overview">
+        <div class="shell">
+            <div class="section-heading section-heading--center reveal">
+                <p class="eyebrow">At a Glance</p>
+                <h2>The shape of the quarter, clearly framed.</h2>
+            </div>
+            <div class="overview-grid">
+                <article class="overview-item reveal">
+                    <span class="overview-value">1</span>
+                    <h3>Quarter</h3>
+                    <p>A compact academic format that made every week feel fast, focused, and full.</p>
+                </article>
+                <article class="overview-item reveal">
+                    <span class="overview-value">4</span>
+                    <h3>Courses</h3>
+                    <p>Chosen across economics, supply chain, accounting, and web fundamentals.</p>
+                </article>
+                <article class="overview-item reveal">
+                    <span class="overview-value">2</span>
+                    <h3>Worlds</h3>
+                    <p>Academic structure by day, city-scale discovery in every gap around it.</p>
+                </article>
+                <article class="overview-item reveal">
+                    <span class="overview-value">1</span>
+                    <h3>Takeaway</h3>
+                    <p>More independence, more perspective, and a much wider sense of what studying abroad can be.</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-------------------------------------------------------------------------------->
-    <!---------------------- Exploring Los Angeles Section --------------------------->
-   <section id="exploring-la">
-    <h2>Exploring Los Angeles</h2>
-    <p>
-        Los Angeles is a city that offers something for everyone—from iconic landmarks to hidden gems. My time exploring LA was packed with adventures, but the real highlight was sharing those experiences with others.
-    </p>
-    <div class="exploring-destinations">
-        <div class="destination">
-            <h3>Santa Monica & Venice Beach</h3>
-            <p>
-                Santa Monica Pier is as iconic as you'd imagine, and Venice Beach has its own unique vibe. Whether you're walking along the boardwalk, checking out street performers, or just soaking up the ocean views, these beaches are worth hanging out and about on. Also Santa Monica Pier.
-            </p>
-        </div>
-        <div class="destination">
-            <h3>Marina del Rey</h3>
-            <p>
-                A quieter alternative to Santa Monica and Venice, Marina del Rey is perfect for relaxing by the water or grabbing a bite at one of the many waterfront restaurants. Also while youre at UCLA you will get the chance to go kayaking with other extension students - would most definitely recommend!
-            </p>
-        </div>
-        <div class="destination">
-            <h3>Getty Museum & Griffith Observatory</h3>
-            <p>
-                The Getty Museum offers does offer art but to be honest I'm all about the view of the city, probably one of the best views of LA. The Griffith Observatory is great for hiking towards the Hollywood Sign or a night out with breathtaking cityscapes and stargazing. It also has an amazing view of LA, especially at nighttime.
-            </p>
-        </div>
-        <div class="destination">
-            <h3>Hollywood & Beverly Hills</h3>
-            <p>
-                The Walk of Fame, Beverly Hills, and other tourist hotspots are worth visiting for the photos and the experience. Just don't set your expectations too high—it can get crowded. Oh and the Walk of Fame is rather dirty and camping grounds for homeless people.
-            </p>
-        </div>
-        <div class="destination">
-            <h3>Downtown LA, K-Town, & Arts District</h3>
-            <p>
-                Downtown has its charm, but places like KoreaTown and the ArtsDistrict have their own energy. You’ll find amazing food and cool spots for a night out. KTown never sleeps and has some amazing food (if you like asian foods)
-            </p>
-        </div>
-        <div class="destination">
-            <h3>Compton (Drive Through)</h3>
-            <p>
-                Compton is an area I passed through—it’s probably not an area I’d recommend exploring on foot, but driving through gives a different perspective of LA. Its a bit like the movies depict - cars jacked up on cinder blocks without any wheels, others taken apart partially. It really doesnt feel safe.
-            </p>
-        </div>
-        <div class="destination">
-            <h3>Universal Studios</h3>
-            <p>
-                Universal Studios is a fun experience, but if you're deciding between this and Disney, I’d honestly recommend Disney based on my friend's feedback. Thing is the price ($100+ for Universal, $200+ for Disney for a Day Ticket)
-            </p>
-        </div>
-        <div class="destination">
-            <h3>Malibu</h3>
-            <p>
-                Malibu offers stunning beaches and a more laid-back vibe compared to the busier spots in LA. It’s perfect for a relaxing day trip, with scenic drives and great seafood restaurants along the coast. Or, as of recent news, home to wildfires that diminish everything in their paths
-            </p>
-        </div>
-    </div>
-    <div class="exploring-advice">
-        <h3>Key Tip</h3>
-        <p>
-            Exploring LA is as much about the people as it is about the places. Finding a group to go on adventures with makes the experience a hundred times better. And luckily, meeting people is super easy, since everybody is coming to LA from all over the World and are willing and looking to connect.
-        </p>
-    </div>
-
-
-</section>
-
-    <!-------------------------------------------------------------------------------->
-    <!--------------------------- Media Section -------------------------------------->
-    <section id="media">
-        <h2>Media Highlights</h2>
-        <p style="background-color: yellow;">
-            Below are some videos that capture memorable moments and provide a glimpse into my UCLA experience.
-        </p>
-        <div class=instagram-posts>
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DD8aVBCInH3/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DD8aVBCInH3/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Sieh dir diesen Beitrag auf Instagram an</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DD8aVBCInH3/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ein Beitrag geteilt von Philip S (@philip996)</a></p></div></blockquote>
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DDmE1L0xr_I/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DDmE1L0xr_I/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Sieh dir diesen Beitrag auf Instagram an</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DDmE1L0xr_I/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ein Beitrag geteilt von Paul Kolodziej (@paulkolo11)</a></p></div></blockquote>
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DDCCTJoxc2K/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DDCCTJoxc2K/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Sieh dir diesen Beitrag auf Instagram an</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DDCCTJoxc2K/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ein Beitrag geteilt von Philip S (@philip996)</a></p></div></blockquote>
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DBszqINRDdP/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DBszqINRDdP/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Sieh dir diesen Beitrag auf Instagram an</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DBszqINRDdP/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ein Beitrag geteilt von Philip S (@philip996)</a></p></div></blockquote>
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DAo_bx-SAUX/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DAo_bx-SAUX/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Sieh dir diesen Beitrag auf Instagram an</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DAo_bx-SAUX/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ein Beitrag geteilt von Philip S (@philip996)</a></p></div></blockquote>
-        </div>
-        
-        <div class = "video-wrapper">
-            <div class="video-container">
-                <iframe
-                    src="https://www.youtube.com/embed/oR_m5OFH7xA?si=v6-46pMdmkhg_nxY"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen>
-                </iframe>
+    <section id="academics" class="section section-academics">
+        <div class="shell">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Academics</p>
+                <h2>Learning in Los Angeles meant range, pace, and a different kind of perspective.</h2>
             </div>
-        </div>
-        <div class = "video-wrapper">
-            <div class="video-container">
-                <iframe
-                    src="https://www.youtube.com/embed/IqSB3BWrO8M?si=LktpgZ-BdEyXCQyw"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen>
-                </iframe>
+            <div class="section-intro reveal">
+                <p>
+                    The academic side of the quarter mattered because it grounded everything else. The courses were
+                    practical, varied, and easy to connect back to my degree, but they also gave the experience a
+                    sharper rhythm. They were the structure inside a city that always felt bigger than the schedule.
+                </p>
+            </div>
+            <div class="course-grid">
+                <article class="course-card reveal tilt-card" data-tilt>
+                    <p class="course-label">Economics</p>
+                    <h3>Principles of Macroeconomics</h3>
+                    <p>
+                        A wider view on how economies move, react, and create the kind of context that makes global
+                        decision-making easier to read.
+                    </p>
+                    <a href="principles-of-macroeconomics.html">Open course page</a>
+                </article>
+                <article class="course-card reveal tilt-card" data-tilt>
+                    <p class="course-label">Operations</p>
+                    <h3>Global Supply Chain Management</h3>
+                    <p>
+                        One of the clearest examples of how global systems, logistics, and business reality connect
+                        once theory meets scale.
+                    </p>
+                    <a href="global-supply-chain-management.html">Open course page</a>
+                </article>
+                <article class="course-card reveal tilt-card" data-tilt>
+                    <p class="course-label">Finance</p>
+                    <h3>Cost Accounting &amp; Analysis</h3>
+                    <p>
+                        A more detailed look at decision-making through numbers, structure, and the logic behind how
+                        companies evaluate performance.
+                    </p>
+                    <a href="cost-accounting-analysis.html">Open course page</a>
+                </article>
+                <article class="course-card reveal tilt-card" data-tilt>
+                    <p class="course-label">Craft</p>
+                    <h3>HTML &amp; CSS</h3>
+                    <p>
+                        The course that unexpectedly made the quarter feel even more tangible by connecting design,
+                        structure, and building on the web.
+                    </p>
+                    <a href="html-css.html">Open course page</a>
+                </article>
+            </div>
+            <div class="section-actions reveal">
+                <a class="text-link" href="all-courses.html">Browse the full course archive</a>
             </div>
         </div>
     </section>
 
-    <!-------------------------------------------------------------------------------->
-    <!------------------------- Reflection Section ----------------------------------->
-    <section id="reflection">
-        <h2>Reflection</h2>
-        <p>
-            Applying to UCLA was a straightforward process through <strong>Mobility Online</strong> and the <a href="https://portal.uclaextension.edu/portal/logon.do?method=load">UCLA Extension Portal</a>. There were some fees involved, including an initial payment of <strong>$500</strong> upon acceptance. The total payment for the quarter was around <strong>$3800</strong>, with the remainder ($3300) due a month before the start.<br><br>
-            <strong>Worth mentioning:</strong> Only the $500 for acceptance is needed to get a visa.
-        </p>
-        <p>
-           Studying at UCLA and living in Los Angeles was an experience unlike any other. Coming from Germany, where things are often structured, efficient, and well-organized, LA felt like stepping into a completely different world. The fast-paced lifestyle, cultural diversity, and sheer size of the city were both exciting and overwhelming at times. <br>
-            There were definitely challenges along the way—navigating the bureaucracy of enrolling in courses, dealing with the high cost of living, and adapting to a completely different academic system. But those challenges pushed me out of my comfort zone and taught me valuable lessons in adaptability and independence. Grocery shopping alone was an adjustment, realizing how different (and expensive!) everything was compared to back home. <br>
-            Living in a place as diverse and fast-paced as LA really opened my eyes to different cultures and ways of life. Being surrounded by so many different cultures, cuisines, and perspectives definitely helped me grow in ways I plainly could not imagine in Germany.<br>
-            Looking back, spending a quarter at UCLA was one of the best decisions I’ve made. Sure, there were challenges—figuring out the paperwork, adjusting to a different academic system, and getting used to life in such a huge, bustling city. But all of that was part of the adventure. I got to meet amazing people from all over the world, experience the energy of LA, and study at one of the most renowned universities out there. It wasn’t always easy, but it was definitely an experience I wouldn’t trade for anything. If you ever get the chance to study abroad, I’d say go for it—you’ll come back with a whole new perspective.
-        </p>
+    <section id="campus-life" class="section section-campus">
+        <div class="shell">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Campus Life</p>
+                <h2>What stayed with me most was how alive the campus felt from one end of the day to the other.</h2>
+            </div>
+            <div class="campus-feature reveal">
+                <div class="campus-feature-copy">
+                    <p class="campus-feature-label">Daily Atmosphere</p>
+                    <p class="campus-feature-quote">
+                        UCLA felt less like a collection of buildings and more like a full environment with its own
+                        energy, routines, and momentum.
+                    </p>
+                </div>
+            </div>
+            <div class="campus-grid">
+                <article class="campus-card reveal">
+                    <h3>Scale &amp; Energy</h3>
+                    <p>
+                        Coming from a much smaller university setting, the sheer size of UCLA immediately changed how
+                        campus life felt. There was always movement, always people, always something happening.
+                    </p>
+                </article>
+                <article class="campus-card reveal">
+                    <h3>Community</h3>
+                    <p>
+                        The international mix made everyday conversations interesting. The campus never felt narrow or
+                        isolated because so many backgrounds, perspectives, and ambitions met in the same spaces.
+                    </p>
+                </article>
+                <article class="campus-card reveal">
+                    <h3>Clubs, Food, Routine</h3>
+                    <p>
+                        UCLA's appeal was not one single highlight. It was the feeling that the campus had enough
+                        depth to make every day look slightly different.
+                    </p>
+                </article>
+                <article class="campus-card reveal">
+                    <h3>School Spirit</h3>
+                    <p>
+                        Sports culture, pride, and scale all added to the sense that UCLA was not only a place to
+                        study, but a place people genuinely identified with.
+                    </p>
+                </article>
+            </div>
+        </div>
     </section>
-</div>
+
+    <section id="los-angeles" class="section section-la">
+        <div class="shell">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Los Angeles</p>
+                <h2>The city made the quarter feel wider, brighter, and far less predictable.</h2>
+            </div>
+            <div class="section-intro reveal">
+                <p>
+                    UCLA gave the experience its center of gravity. Los Angeles gave it range. What made the city stay
+                    with me was not only the list of places, but how differently each part of it felt once you moved
+                    through it.
+                </p>
+            </div>
+            <div class="location-grid">
+                <article class="location-card reveal tilt-card" data-tilt>
+                    <img
+                        src="images/santa-monica.jpg"
+                        alt="Palm trees and the atmosphere of Santa Monica near the coast"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                    <div class="location-card-copy">
+                        <h3>Santa Monica &amp; Venice</h3>
+                        <p>The coastline delivered exactly the version of Los Angeles people imagine, but with a pace that made it easy to stay longer than planned.</p>
+                    </div>
+                </article>
+                <article class="location-card reveal tilt-card" data-tilt>
+                    <img
+                        src="images/marina-del-rey.jpg"
+                        alt="Marina del Rey waterfront with boats and open sky"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                    <div class="location-card-copy">
+                        <h3>Marina del Rey</h3>
+                        <p>Quieter, calmer, and almost restorative compared to the louder edges of the city.</p>
+                    </div>
+                </article>
+                <article class="location-card reveal tilt-card" data-tilt>
+                    <img
+                        src="images/getty-museum.jpg"
+                        alt="Getty Museum setting with a view over the city"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                    <div class="location-card-copy">
+                        <h3>Getty &amp; Griffith</h3>
+                        <p>Two places where the city made the strongest visual impression, especially when the skyline started to flatten into light.</p>
+                    </div>
+                </article>
+                <article class="location-card reveal tilt-card" data-tilt>
+                    <img
+                        src="images/downtown-la.jpg"
+                        alt="Downtown Los Angeles skyline"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                    <div class="location-card-copy">
+                        <h3>Downtown, K-Town, Arts District</h3>
+                        <p>Each area carried a different texture, which made the city feel less like one place and more like a shifting collection of worlds.</p>
+                    </div>
+                </article>
+                <article class="location-card reveal tilt-card" data-tilt>
+                    <img
+                        src="images/malibu.jpeg"
+                        alt="Coastline and ocean light in Malibu"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                    <div class="location-card-copy">
+                        <h3>Malibu</h3>
+                        <p>The kind of coastal distance that made the quarter briefly feel slower, quieter, and more cinematic.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="highlights" class="section section-highlights">
+        <div class="shell">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Highlights</p>
+                <h2>A few frames that hold the feeling of the quarter better than any full recap could.</h2>
+            </div>
+            <div class="highlight-grid">
+                <article class="highlight-card highlight-card--large reveal">
+                    <img
+                        src="images/universal-studios2.jpg"
+                        alt="Universal Studios visit during the quarter"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                    <div class="highlight-copy">
+                        <p class="highlight-label">Shared Moments</p>
+                        <h3>Some memories stayed because of the place. Most stayed because of the people around them.</h3>
+                    </div>
+                </article>
+                <article class="highlight-card reveal">
+                    <div class="highlight-copy">
+                        <p class="highlight-label">Short-form media</p>
+                        <h3>Selected reels from the quarter</h3>
+                        <p>
+                            The original social posts still work best as supporting material rather than main-stage content.
+                            They remain part of the story, but not the whole presentation.
+                        </p>
+                        <div class="media-links">
+                            <a href="https://www.instagram.com/reel/DD8aVBCInH3/" target="_blank" rel="noreferrer">Watch reel one</a>
+                            <a href="https://www.instagram.com/reel/DDCCTJoxc2K/" target="_blank" rel="noreferrer">Watch reel two</a>
+                            <a href="https://www.instagram.com/reel/DBszqINRDdP/" target="_blank" rel="noreferrer">Watch reel three</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="highlight-card reveal">
+                    <div class="highlight-copy">
+                        <p class="highlight-label">Longer clips</p>
+                        <h3>Two longer video moments</h3>
+                        <div class="media-links">
+                            <a href="https://www.youtube.com/watch?v=oR_m5OFH7xA" target="_blank" rel="noreferrer">Open video one</a>
+                            <a href="https://www.youtube.com/watch?v=IqSB3BWrO8M" target="_blank" rel="noreferrer">Open video two</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="reflection" class="section section-reflection">
+        <div class="shell shell--narrow">
+            <div class="section-heading section-heading--center reveal">
+                <p class="eyebrow">Reflection</p>
+                <h2>The strongest part of the quarter was how much larger it became once I was inside it.</h2>
+            </div>
+            <div class="reflection-copy reveal">
+                <p>
+                    Looking back, UCLA was not memorable because everything was easy. The quarter asked for adaptation:
+                    a different academic system, a different city scale, a different sense of everyday routine. That
+                    friction was part of what made it matter.
+                </p>
+                <p>
+                    What I took away most was perspective. Living and studying in Los Angeles made me more independent,
+                    more open, and more aware of how strongly place shapes experience. The courses were important. The
+                    city was important. But the combination of both is what turned the quarter into something that still
+                    feels larger than a semester abroad.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="outro" class="section section-outro">
+        <div class="outro-media-wrap">
+            <img
+                class="outro-media"
+                src="images/beverly-hills.jpg"
+                alt="Sunlit palm-lined street in Los Angeles"
+                loading="lazy"
+                decoding="async"
+            >
+            <div class="outro-media-overlay"></div>
+        </div>
+        <div class="shell shell--narrow outro-content reveal">
+            <p class="eyebrow">End of the Quarter</p>
+            <h2>Still one of the easiest decisions to look back on and call worth it.</h2>
+            <p>
+                A quarter in Los Angeles that started as an academic exchange and ended up feeling much more personal,
+                much more visual, and much more formative than expected.
+            </p>
+        </div>
+    </section>
+</main>
 
 <script src="js/myDesign.js"></script>
-<script src="https://www.instagram.com/embed.js"></script>
-
 </body>
 </html>
-

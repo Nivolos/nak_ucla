@@ -1,94 +1,101 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Navigation Bar: Highlight the active section
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".section-nav .nav-link");
+document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector(".site-nav");
     const menuToggle = document.querySelector(".menu-toggle");
-    const navLinksContainer = document.querySelector(".nav-links");
+    const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
+    const trackedSections = navLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+    const revealItems = document.querySelectorAll(".reveal");
+    const heroMedia = document.querySelector(".hero-media");
+    const tiltCards = document.querySelectorAll("[data-tilt]");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    function activateLink() {
-        let index = sections.length;
-
-        while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-
-        navLinks.forEach((link) => link.classList.remove("active"));
-        navLinks[index].classList.add("active");
-    }
-
-    window.addEventListener("scroll", activateLink);
-    activateLink();
-
-    // Mobile Menu Toggle
-    if (menuToggle && navLinksContainer) {
+    if (menuToggle && nav) {
         menuToggle.addEventListener("click", () => {
-            navLinksContainer.classList.toggle("active");
-            menuToggle.setAttribute(
-                "aria-expanded",
-                navLinksContainer.classList.contains("active")
-            );
+            const isOpen = nav.classList.toggle("is-open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("is-open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            });
         });
     }
 
-    navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            if (window.innerWidth <= 768 && navLinksContainer.classList.contains("active")) {
-                navLinksContainer.classList.remove("active");
-                menuToggle.setAttribute("aria-expanded", "false");
-            }
-        });
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        },
+        {
+            threshold: 0.12,
+            rootMargin: "0px 0px -8% 0px",
+        }
+    );
+
+    revealItems.forEach((item) => {
+        if (prefersReducedMotion) {
+            item.classList.add("is-visible");
+        } else {
+            revealObserver.observe(item);
+        }
     });
 
-    // Campus Life: Tile click interaction
-    const tiles = document.querySelectorAll(".tile");
-    const background = document.querySelector(".background-container");
+    const sectionObserver = new IntersectionObserver(
+        (entries) => {
+            const visibleEntry = entries
+                .filter((entry) => entry.isIntersecting)
+                .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-    // Function to reset all tiles and hide the overlay
-    function resetTiles() {
-        tiles.forEach((tile) => {
-            tile.classList.remove("hidden", "fade-out");
-        });
-        if (background) {
-            background.style.opacity = "0";
-            background.style.pointerEvents = "none"; //Disable clicks on the background
-            background.innerHTML = ""; // Clear overlay content
-        }
-    }
-
-    // Add click event listeners to tiles
-    tiles.forEach((tile) => {
-        tile.addEventListener("click", () => {
-            // If background is already visible, reset tiles
-            if (background.style.opacity === "1") {
-                resetTiles();
+            if (!visibleEntry) {
                 return;
             }
 
-            // Get the tile's content
-            const title = tile.textContent;
-            const content = tile.getAttribute("data-content");
+            navLinks.forEach((link) => {
+                const matches = link.getAttribute("href") === `#${visibleEntry.target.id}`;
+                link.classList.toggle("is-active", matches);
+            });
+        },
+        {
+            threshold: [0.25, 0.45, 0.7],
+            rootMargin: "-20% 0px -55% 0px",
+        }
+    );
 
-            // Update the overlay content and make it visible
-            if (background) {
-                background.innerHTML = `
-                    <div class="background-title">${title}</div>
-                    <div class="background-content">${content}</div>
-                `;
-                background.style.opacity = "1";
-                background.style.pointerEvents = "auto"; // Enable clicks on the background
-            }
+    trackedSections.forEach((section) => sectionObserver.observe(section));
 
-            // Hide other tiles except the clicked one
-            tiles.forEach((otherTile) => {
-                if (otherTile !== tile) {
-                    otherTile.classList.add("hidden");
-                }
+    if (!prefersReducedMotion && heroMedia) {
+        const updateHeroParallax = () => {
+            const offset = Math.min(window.scrollY * 0.06, 20);
+            heroMedia.style.transform = `scale(1.06) translateY(${offset}px)`;
+        };
+
+        updateHeroParallax();
+        window.addEventListener("scroll", updateHeroParallax, { passive: true });
+    }
+
+    if (!prefersReducedMotion && window.matchMedia("(min-width: 1024px)").matches) {
+        tiltCards.forEach((card) => {
+            card.addEventListener("pointermove", (event) => {
+                const rect = card.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+                const rotateY = ((x / rect.width) - 0.5) * 5;
+                const rotateX = ((y / rect.height) - 0.5) * -5;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
             });
 
-            tile.classList.add("fade-out");
+            card.addEventListener("pointerleave", () => {
+                card.style.transform = "";
+            });
         });
-    });
-
-    // Close overlay when clicking anywhere on the background
-    if (background) {
-        background.addEventListener("click", resetTiles);
     }
 });
